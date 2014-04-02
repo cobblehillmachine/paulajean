@@ -1,16 +1,16 @@
 $(window).load(function() {
-	splashH();
+	
 
 });
 
 
 $(document).ready(function() {
-	splashH();
+	$('#main-wrap, #footer, #banner').fadeIn('slow');
 
 });
 
 $(window).resize(function() {
-	splashH();
+	
 
 });
 

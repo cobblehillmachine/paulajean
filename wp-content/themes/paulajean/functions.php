@@ -471,7 +471,7 @@ function my_login_logo() { ?>
     <style type="text/css">
         body.login div#login h1 a {
             background-image: url(<?php echo get_bloginfo( 'template_directory' ) ?>/images/logo.png);
-            background-size:auto;
+            background-size:auto; width:100%; height:207px;
         }
     </style>
 <?php }

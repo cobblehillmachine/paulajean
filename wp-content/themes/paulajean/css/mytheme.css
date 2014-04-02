@@ -1,6 +1,6 @@
-body {margin:0; padding:0; width:100%; min-width:320px; font-family: "open-sans"; font-weight: 300; color:#254f5d;}
+body {margin:0; padding:0; width:100%; min-width:320px; font-family: "open-sans"; font-weight: 300; color:#637175; font-size:18px;}
 a {text-decoration:none; color:#254f5d; outline:0;}
-a:hover {text-decoration:underline;}
+a:hover {text-decoration:none; transition: all 0.5s ease;}
 a img {border:0;}
 img {vertical-align:top; max-width:100%;}
 ul {list-style:none; padding:0; margin:0;}
@@ -21,53 +21,92 @@ input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset;}
 mark {background:#fff;}
 * {box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
 *:focus {outline:none;}
-/*REUSABLE*/
-.mid-cont {position:relative; width:100%; margin:auto; max-width:1900px;}
-.hidden {display:none;}
-.last {margin-right:0;}
-.table {display:table; height:100%; width:100%;}
-.table-cell {display:table-cell; vertical-align:middle; width:100%; height:100%;}
 
-/*FONTS*/
-.light {font-family: "open-sans",sans-serif; font-style: normal; font-weight: 300;}
-.semi-bold {font-family: "open-sans",sans-serif; font-style: normal; font-weight: 600;}
 
 /*HEADER*/
+#header {padding:25px 10px; background:#fff;}
+#header #logo {position:absolute; top:0; left:0; margin-top:-25px; width:237px; z-index:1; margin-left:5%;}
+#header #nav {float:right; margin-right:5%;}
+#header #nav li {float:left; margin-left:65px; }
+#header #nav li a {font-size:16px; color:#1e516f; transition: all 0.5s ease;}
+#header #nav li a:hover {color:#7e9198;}
 
 /*FOOTER*/
+#footer {background:url(../images/pattern.png) repeat-x center top; min-height:80px; padding:80px 0 50px 0;}
+#footer .mid-cont div {float:left; text-align:center;}
+#footer .footer-box {padding-top:30px; font-size:14px; line-height:24px;}
+#footer .footer-box a {color:#1e516f;}
+#social-cont .social-icon {float:left; background:#1e516f; height:22px; margin-right:25px;}
+#social-cont .social-icon:hover {background:#7e9198;}
+#social-cont {padding-top:35px;}
 
 /*HOMEPAGE*/
 
-/*SPLASH*/
-#logo {position:relative; top:0; width:100%; text-align:center; z-index:10;}
-#logo img {display:inline-block;}
-#main-cont {float:left; width:100%; margin-top:-65px;}
-#main-cont .block {float:left; width:33.33333%;}
-#main-cont .block img {width:100%; height:auto; opacity:.7; filter:alpha(opacity=70); }
-#main-cont .gray {background:#efefef; text-align:center; font-size:20px; }
-#main-cont .gray .coming-soon {font-size:48px; display:inline-block; line-height:40px; max-width:65%;}
-#main-cont .phone {font-weight: 600; display:inline-block; width:100%;}
-#divider {float:left; width:100%; margin-top:40px; background:url(../images/divider.png) repeat-x; height:60px;}
-#small-divider {display:inline-block; width:100%; background:url(../images/small-divider.png) no-repeat center center; height:10px; margin:40px 0;}
+/*REUSABLE*/
+.mid-cont {position:relative; width:100%; margin:auto; max-width:1280px;}
+.cont, .services-divider img {float:left; width:100%;}
+.inline {display:inline-block; float:none !important; text-align:center;}
+.hidden, .mobile, #main-wrap, #footer, #banner {display:none;}
+.last, #social-cont .social-icon:last-child {margin-right:0;}
+.table {display:table; height:100%; width:100%;}
+.table-cell {display:table-cell; vertical-align:middle; width:100%; height:100%;}
+#banner .banner-img {float:left; opacity:.7; filter:alpha(opacity=70); padding-right:1px;}
+#wrapper {padding:105px 5% 80px 5%;}
+#wrapper .page-icon {float:left; padding-right:30px;}
+#wrapper .page-header {font-size:36px; color:#3c4244; float:left; width:100%; margin-bottom:25px;}
+#wrapper .content {line-height:28px;}
+#wrapper .gray-cont {background:#eaeaea; border-radius:10px; margin:15px 0 50px 0; padding:25px 20px 2px 20px; text-align:center;}
+#wrapper .gray-cont a, .error404 .copy a {color:#254f5d;}
+#wrapper .gray-cont a:hover, .error404 .copy a:hover {text-decoration:underline;}
 
+.services-divider {text-align:center; margin-bottom:50px;}
 
-@media screen and (min-width:1600px) {
-	#main-cont .gray .coming-soon {max-width:90%;}
+/*FONTS*/
+.regular, #header #nav li a, #wrapper .gray-cont a, .error404 .copy a {font-weight: 400;}
+.semi-bold, #footer .footer-box strong {font-weight: 600;}
+
+/*RETINA*/
+@media (-webkit-min-device-pixel-ratio: 2) , (min-resolution: 192dpi) {
+	#footer {background:url(../images/pattern@2x.png) repeat-x center top; background-size:523px;}
+	
 }
 
-@media screen and (max-width:900px) {
-	#logo img {margin-left:-60px;}
-	#main-cont .gray .coming-soon {font-size:40px; line-height:35px;}
-	#small-divider {margin:25px 0;}
+/*GRIDPAK*/    
+.span_1, #footer .divider {width:8.33333333333%;}
+.span_2, #social-cont {width:16.6666666667%;}
+.span_3, #header #logo, #wrapper .page-icon {width:25.0%;}
+.span_4, #home .right-cont, #banner .banner-img, #footer .footer-box {width:33.3333333333%; float:left;}
+.span_5 {width:41.6666666667%;}
+.span_6, .services-cont .col {width:50.0%; float:left;}
+.span_7 {width:58.3333333333%;}
+.span_8, #home .left-cont {width:66.6666666667%; float:left;}
+.span_9, #wrapper .copy {width:75.0%; float:right;}
+.span_10 {width:83.3333333333%;}
+.span_11 {width:91.6666666667%;}
+.span_12 {margin-left:0; width:100%;}
+
+.row {margin-left:-35px;}
+.col {padding-left:35px;}
+
+@media screen and (max-width:939px) {
+	#social-cont .social-icon {margin-right:16px;}
+	.services-cont .col {width:100%;}
 }
 
 @media screen and (max-width:767px) {
-	#logo img {margin-left:-38px; max-width:245px;}
-	#main-cont .block-img {display:none;}
-	#main-cont .gray {width:100%; height:335px !important;}
-	#main-cont .gray .coming-soon {font-size:35px; line-height:30px; margin-top:35px;}
-	#divider {margin-top:25px;}
-	
+	body {font-size:16px;}
+	#wrapper .copy, #footer .footer-box, #social-cont {width:100%;}
+	.mobile {display:block;}
+	.desktop, #banner .banner-img:last-child {display:none;}
+	.inline, #mobile-nav ul.menu {display:inline-block; float:none; text-align:center;}
+	#mobile-nav {background:#1e516f; text-align:center;}
+	#mobile-nav li {float:left; padding:15px 15px 12px;}
+	#mobile-nav li a {color:#fff; font-size:16px;}
+	#banner .banner-img {width:50%;padding-right:0;}
+	#header #logo {width:60%; margin-left:0;}
+	#main-wrap #wrapper {padding:40px 5%;}
+	#wrapper .page-header {font-size:24px;}
+	#wrapper .content {line-height:23px;}
 }
 
 
