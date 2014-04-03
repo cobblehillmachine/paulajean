@@ -27,8 +27,10 @@
 	<meta name="format-detection" content="telephone=no">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/jquery.bxslider.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/mytheme.css" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.bxslider.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/retina.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/mytheme.js"></script>
 
@@ -55,6 +57,16 @@
 				<img class="banner-img" alt="" src="<?php echo get_template_directory_uri(); ?>/images/404-3.png" />
 			</div>
 		</div>
+	<?php } else if(is_page('Portfolio')) { ?>
+		<?php while ( have_posts() ) : the_post(); ?>
+			<div id="banner" class="cont">
+				<div id="portfolio-cont">
+					<ul class="bxslider">
+						<?php the_content(); ?>
+					</ul>
+				</div>
+			</div>
+		<?php endwhile; ?>
 	<?php } else { ?>
 	<div id="banner" class="cont">
 		<div class="mid-cont">
@@ -65,6 +77,7 @@
 	</div>
 	<?php } ?>
 	<div id="mobile-nav" class="mobile cont"><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></div>
+	<?php if(!is_page('portfolio')) { ?>
 	<div id="main-wrap" class="cont">
 		<div class="mid-cont">
 			<div id="wrapper" class="cont">
@@ -84,3 +97,4 @@
 						
 					</div>
 				</div>
+	<?php } ?>

@@ -9,9 +9,11 @@
  * @since Twenty Fourteen 1.0
  */
 ?>
+		<?php if(!is_page('portfolio')) { ?>
 				</div>
 			</div>
 		</div>
+		<?php } ?>
 		<div id="footer" class="cont">
 			<div class="mid-cont">
 				<div class="footer-box">

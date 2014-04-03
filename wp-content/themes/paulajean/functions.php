@@ -477,13 +477,22 @@ function my_login_logo() { ?>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-function my_theme_wrapper_start() {
-  echo '<section id="main">';
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+	$args1 = array(
+		'labels' => array(
+			'name' => __( 'Press' ),
+			'singular_name' => __( 'Press' )
+		),
+		'public' => true,
+		'exclude_from_search' => true,
+		'rewrite' => array('slug' => 'press'),
+		'supports' => array( 'title', 'thumbnail' )
+	);
+	register_post_type( 'Press', $args1);
 }
 
-function my_theme_wrapper_end() {
-  echo '</section>';
+if ( function_exists( 'add_image_size' ) ) { 
+	add_image_size( 'press-thumb', 330, 420, true ); //300 pixels wide (and unlimited height)
+	//add_image_size( 'homepage-thumb', 220, 180, true ); //(cropped)
 }
-add_theme_support( 'woocommerce' );

@@ -6,6 +6,21 @@ $(window).load(function() {
 
 $(document).ready(function() {
 	$('#main-wrap, #footer, #banner').fadeIn('slow');
+	$('#portfolio-cont .bxslider img').each(function() {
+		$(this).wrapAll('<li></li>');
+	});
+	 $('#press-cont .bxslider').bxSlider({
+		minSlides: 1,
+	    maxSlides: 4,
+	    moveSlides: 1,
+	    slideMargin: 25
+	});
+	 $('#portfolio-cont .bxslider').bxSlider({
+		// minSlides: 1,
+		// 	    maxSlides: 4,
+	    moveSlides: 1,
+	    slideMargin: 2
+	});
 
 });
 
