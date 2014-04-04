@@ -30,7 +30,8 @@
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/jquery.bxslider.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/mytheme.css" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.bxslider.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.carouFredSel-6.2.1.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/retina.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/mytheme.js"></script>
 
@@ -60,7 +61,7 @@
 	<?php } else if(is_page('Portfolio')) { ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<div id="banner" class="cont">
-				<div id="portfolio-cont">
+				<div id="portfolio-cont" class="cont">
 					<ul class="bxslider">
 						<?php the_content(); ?>
 					</ul>
