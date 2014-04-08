@@ -57,21 +57,16 @@ mark {background:#fff;}
 #press-cont li a {font-size:14px; float:left; text-align:center; width:100%;}
 
 /*PORTFOLIO SLIDER*/
-#portfolio-cont {background:#f0f0f0;}
-#portfolio-cont .fotorama--wp {margin:0;}
-#portfolio-cont .fotorama__nav__frame {width:100px !important; height:100px !important; padding: 0 3px;}
-#portfolio-cont .fotorama__thumb img {width:100px !important; height:132px !important; margin-top:-66px !important; margin-left:-50px !important;}
-#portfolio-cont .fotorama__thumb-border {/*width:96px !important; height:96px !important; border-color:#1e516f;*/ display:none !important;}
-/*#portfolio-cont .fotorama__nav__frame.fotorama__active  {border:3px solid #1e516f; padding:0;}*/
-/*#portfolio-cont .bxslider li {width:auto !important;}
-#portfolio-cont .bxslider li img {height:685px; width:auto;}
-#portfolio-cont .bx-wrapper .bx-viewport {border:none; left:0;}
-#portfolio-cont .bx-wrapper .bx-controls-direction a {margin-top:-445px;}
-
-#carousel {height:750px !important;}
-#carousel img {height:750px !important; width:auto;}*/
-/*.fotorama__thumb img {width:100px !important; height:100px !important;}*/
-/*.fotorama__error .fotorama__img, .fotorama__loaded .fotorama__img {height:auto !important; width:150px !important; margin-left:-78px !important;}*/
+#portfolio-cont {background:#f0f0f0; margin-bottom:45px;}
+#portfolio-cont #slideshow-wrappergallery1 #imagegallery1 img {height:700px !important; width:auto !important;}
+#portfolio-cont #slideshow-wrappergallery1 #fullsizegallery1 {z-index:0;}
+#portfolio-cont #slideshow-wrappergallery1 #sliderightgallery1 {background:url(../images/arrow.png) no-repeat center center #1e516f; float:right; transform:rotate(180deg); -ms-transform:rotate(180deg); -webkit-transform:rotate(180deg); }
+#portfolio-cont #slideshow-wrappergallery1 #slideleftgallery1 {background:url(../images/arrow.png) no-repeat center center #1e516f; float:left;}
+#portfolio-cont #slideshow-wrappergallery1 #slideareagallery1 {width:calc(100% - 45px);}
+@media screen and (max-width:1100px) {
+	#portfolio-cont #slideshow-wrappergallery1 #imagegallery1 img, #portfolio-cont #slideshow-wrappergallery1 #fullsizegallery1 {height:450px !important;}
+	
+}
 
 /*REUSABLE*/
 .mid-cont {position:relative; width:100%; margin:auto; max-width:1280px;}
@@ -135,17 +130,23 @@ mark {background:#fff;}
 @media screen and (max-width:767px) {
 	body {font-size:16px;}
 	#wrapper .copy, #footer .footer-box, #social-cont {width:100%;}
-	.mobile {display:block;}
-	.desktop, #banner .banner-img:last-child, #press-cont .bx-controls-direction, #press-cont .bxslider li.bx-clone {display:none;}
-	.inline, #mobile-nav ul.menu {display:inline-block; float:none; text-align:center;}
-	#mobile-nav {background:#1e516f; text-align:center;}
-	#mobile-nav li {float:left; padding:15px 15px 12px;}
-	#mobile-nav li a {color:#fff; font-size:16px;}
+	.mobile, #portfolio #nav {display:block;}
+	.desktop, #banner .banner-img:last-child, #press-cont .bx-controls-direction, #press-cont .bxslider li.bx-clone, #portfolio #mobile-nav, #portfolio-cont #slideshow-wrappergallery1 #thumbnailsgallery1 {display:none;}
+	.inline, #mobile-nav ul.menu, #portfolio #nav ul.menu {display:inline-block; float:none; text-align:center;}
+	#mobile-nav, #header #nav {background:#1e516f; text-align:center;}
+	#mobile-nav li, #header #nav li {float:left; padding:15px 15px 12px; margin:0;}
+	#mobile-nav li a, #header #nav li a {color:#fff; font-size:16px; font-weight:300;}
 	#banner .banner-img {width:50%;padding-right:0;}
 	#header #logo {width:60%; margin-left:0;}
 	#main-wrap #wrapper {padding:40px 5%;}
 	#wrapper .page-header {font-size:24px;}
 	#wrapper .content {line-height:23px;}
+	
+	/*PORTFOLIO*/
+	#portfolio #nav {width:100%; margin:195px 0 40px 0;}
+	#portfolio #header {padding:0;}
+	#portfolio-cont #slideshow-wrappergallery1 {background:#fff;}
+	#portfolio-cont #slideshow-wrappergallery1 #imagegallery1 img, #portfolio-cont #slideshow-wrappergallery1 #fullsizegallery1 {height:350px !important;}
 	
 	/*PRESS*/
 	#press-cont .bxslider, #press-cont .bx-wrapper, #press-cont .bx-wrapper .bx-viewport {width:100% !important;}
@@ -160,4 +161,5 @@ mark {background:#fff;}
 @media screen and (max-width:479px) {
 	#press-cont .bx-wrapper li {width:100% !important; padding:0 !important;}
 	#press-cont li .info-cont {min-height:95px;}
+	#portfolio-cont #slideshow-wrappergallery1 #imagegallery1 img, #portfolio-cont #slideshow-wrappergallery1 #fullsizegallery1 {height:200px !important;}
 }

@@ -62,9 +62,7 @@
 		<?php while ( have_posts() ) : the_post(); ?>
 			<div id="banner" class="cont">
 				<div id="portfolio-cont" class="cont">
-					<ul class="bxslider">
-						<?php the_content(); ?>
-					</ul>
+					<?php if (function_exists('slideshow')) { slideshow(true, "1", false, array()); } ?>
 				</div>
 			</div>
 		<?php endwhile; ?>
