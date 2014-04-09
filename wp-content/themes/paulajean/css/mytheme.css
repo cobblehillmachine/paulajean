@@ -60,9 +60,10 @@ mark {background:#fff;}
 #portfolio-cont {background:#f0f0f0; margin-bottom:45px;}
 #portfolio-cont #slideshow-wrappergallery1 #imagegallery1 img {height:700px !important; width:auto !important;}
 #portfolio-cont #slideshow-wrappergallery1 #fullsizegallery1 {z-index:0;}
-#portfolio-cont #slideshow-wrappergallery1 #sliderightgallery1 {background:url(../images/arrow.png) no-repeat center center #1e516f; float:right; transform:rotate(180deg); -ms-transform:rotate(180deg); -webkit-transform:rotate(180deg); }
-#portfolio-cont #slideshow-wrappergallery1 #slideleftgallery1 {background:url(../images/arrow.png) no-repeat center center #1e516f; float:left;}
+#portfolio-cont #slideshow-wrappergallery1 #sliderightgallery1, #portfolio-cont #slideshow-wrappergallery1 #imgnextgallery1 {background:url(../images/arrow.png) no-repeat center center #1e516f; float:right; transform:rotate(180deg); -ms-transform:rotate(180deg); -webkit-transform:rotate(180deg); }
+#portfolio-cont #slideshow-wrappergallery1 #slideleftgallery1, #portfolio-cont #slideshow-wrappergallery1 #imgprevgallery1 {background:url(../images/arrow.png) no-repeat center center #1e516f; float:left;}
 #portfolio-cont #slideshow-wrappergallery1 #slideareagallery1 {width:calc(100% - 45px);}
+#portfolio-cont #slideshow-wrappergallery1 .imgnav {opacity:1 !important; width:20px; height:114px; margin-top:0; top:40%;}
 @media screen and (max-width:1100px) {
 	#portfolio-cont #slideshow-wrappergallery1 #imagegallery1 img, #portfolio-cont #slideshow-wrappergallery1 #fullsizegallery1 {height:450px !important;}
 	
@@ -115,16 +116,18 @@ mark {background:#fff;}
 .col {padding-left:35px;}
 
 @media screen and (max-width:1279px) {
-	#press-cont {width:100% !important;}
-	#press-cont .bx-wrapper {width:865px; display:inline-block;}
-}
-
-@media screen and (max-width:965px) {
-	#social-cont .social-icon {margin-right:16px;}
-	.services-cont .col {width:100%;}
 	#press-cont .bx-wrapper .bx-viewport {left:40px; width:615px !important;}
 	#press-cont .bx-wrapper li {max-width:185px;}
 	#press-cont .bx-wrapper {width:695px;}
+}
+
+@media screen and (max-width:1030px) {
+	#social-cont .social-icon {margin-right:16px;}
+	.services-cont .col {width:100%;}
+	#press-cont .bx-wrapper .bx-viewport {left:40px; width:425px !important;}
+	#press-cont .bx-wrapper li {max-width:185px;}
+	#press-cont .bx-wrapper {width:485px;}
+
 }
 
 @media screen and (max-width:767px) {
