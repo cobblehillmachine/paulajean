@@ -103,11 +103,11 @@ mark {background:#fff;}
 .span_1, #footer .divider {width:8.33333333333%;}
 .span_2, #social-cont {width:16.6666666667%;}
 .span_3, #header #logo, #wrapper .page-icon {width:25.0%;}
-.span_4, #home .right-cont, #banner .banner-img.triple, #footer .footer-box {width:33.3333333333%; float:left;}
+.span_4, #home .right-cont, #banner .banner-img.triple, #footer .footer-box, #banner .banner-img.double:first-child {width:33.3333333333%; float:left;}
 .span_5 {width:41.6666666667%;}
-.span_6, .services-cont .col, #banner .banner-img.double {width:50.0%; float:left;}
+.span_6, .services-cont .col {width:50.0%; float:left;}
 .span_7 {width:58.3333333333%;}
-.span_8, #home .left-cont {width:66.6666666667%; float:left;}
+.span_8, #home .left-cont, #banner .banner-img.double:last-child {width:66.6666666667%; float:left;}
 .span_9, #wrapper .copy {width:75.0%; float:right;}
 .span_10 {width:83.3333333333%;}
 .span_11 {width:91.6666666667%;}
@@ -140,12 +140,12 @@ mark {background:#fff;}
 	#mobile-nav, #header #nav {background:#1e516f; text-align:center;}
 	#mobile-nav li, #header #nav li {float:left; padding:15px 15px 12px; margin:0;}
 	#mobile-nav li a, #header #nav li a {color:#fff; font-size:16px; font-weight:300;}
-	#banner .banner-img.triple, #banner .banner-img.double:last-child {width:50%;padding-right:0;}
+	#banner .banner-img.triple {width:50%;padding-right:0;}
 	#header #logo {width:60%; margin-left:0;}
 	#main-wrap #wrapper {padding:40px 5%;}
 	#wrapper .page-header {font-size:24px;}
 	#wrapper .content {line-height:23px;}
-	#banner .banner-img.single {padding-right:0;}
+	#banner .banner-img.single, #banner .banner-img.double:first-child {padding-right:0;}
 	
 	/*PORTFOLIO*/
 	#portfolio #nav {width:100%; margin:195px 0 40px 0;}
