@@ -69,9 +69,10 @@
 	<?php } else { ?>
 	<div id="banner" class="cont">
 		<div class="mid-cont">
-			<img class="banner-img" alt="" src="<?php the_field('image_1'); ?>" />
-			<img class="banner-img" alt="" src="<?php the_field('image_2'); ?>" />
-			<img class="banner-img" alt="" src="<?php the_field('image_3'); ?>" />
+			
+			<img class="banner-img <?php if( !get_post_meta($post->ID, 'image_2', true) && !get_post_meta($post->ID, 'image_3', true)) { ?> single<?php } else if( !get_post_meta($post->ID, 'image_3', true)) { ?>double<?php } else { ?>triple<?php } ?>" alt="" src="<?php the_field('image_1'); ?>" />
+			<?php if( get_post_meta($post->ID, 'image_2', true)) { ?><img class="banner-img <?php if( !get_post_meta($post->ID, 'image_3', true)) { ?>double<?php } else { ?>triple<?php } ?>" alt="" src="<?php the_field('image_2'); ?>" /><?php } ?>
+			<?php if( get_post_meta($post->ID, 'image_3', true)) { ?><img class="banner-img triple" alt="" src="<?php the_field('image_3'); ?>" /><?php } ?>
 		</div>
 	</div>
 	<?php } ?>

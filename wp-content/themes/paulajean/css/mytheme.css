@@ -78,6 +78,7 @@ mark {background:#fff;}
 .table {display:table; height:100%; width:100%;}
 .table-cell {display:table-cell; vertical-align:middle; width:100%; height:100%;}
 #banner .banner-img {float:left; opacity:.7; filter:alpha(opacity=70); padding-right:1px;}
+#about #banner .banner-img {opacity:1; filter:alpha(opacity=100);}
 #wrapper {padding:105px 5% 80px 5%;}
 #wrapper .page-icon {float:left; padding-right:30px;}
 #wrapper .page-header {font-size:36px; color:#3c4244; float:left; width:100%; margin-bottom:25px;}
@@ -102,15 +103,15 @@ mark {background:#fff;}
 .span_1, #footer .divider {width:8.33333333333%;}
 .span_2, #social-cont {width:16.6666666667%;}
 .span_3, #header #logo, #wrapper .page-icon {width:25.0%;}
-.span_4, #home .right-cont, #banner .banner-img, #footer .footer-box {width:33.3333333333%; float:left;}
+.span_4, #home .right-cont, #banner .banner-img.triple, #footer .footer-box {width:33.3333333333%; float:left;}
 .span_5 {width:41.6666666667%;}
-.span_6, .services-cont .col {width:50.0%; float:left;}
+.span_6, .services-cont .col, #banner .banner-img.double {width:50.0%; float:left;}
 .span_7 {width:58.3333333333%;}
 .span_8, #home .left-cont {width:66.6666666667%; float:left;}
 .span_9, #wrapper .copy {width:75.0%; float:right;}
 .span_10 {width:83.3333333333%;}
 .span_11 {width:91.6666666667%;}
-.span_12 {margin-left:0; width:100%;}
+.span_12, #banner .banner-img.single {margin-left:0; width:100%; float:left;}
 
 .row {margin-left:-35px;}
 .col {padding-left:35px;}
@@ -133,17 +134,18 @@ mark {background:#fff;}
 @media screen and (max-width:767px) {
 	body {font-size:16px;}
 	#wrapper .copy, #footer .footer-box, #social-cont {width:100%;}
-	.mobile, #portfolio #nav {display:block;}
+	.mobile, #portfolio #nav, #banner .banner-img.single:last-child, #banner .banner-img.double:last-child {display:block;}
 	.desktop, #banner .banner-img:last-child, #press-cont .bx-controls-direction, #press-cont .bxslider li.bx-clone, #portfolio #mobile-nav, #portfolio-cont #slideshow-wrappergallery1 #thumbnailsgallery1 {display:none;}
 	.inline, #mobile-nav ul.menu, #portfolio #nav ul.menu {display:inline-block; float:none; text-align:center;}
 	#mobile-nav, #header #nav {background:#1e516f; text-align:center;}
 	#mobile-nav li, #header #nav li {float:left; padding:15px 15px 12px; margin:0;}
 	#mobile-nav li a, #header #nav li a {color:#fff; font-size:16px; font-weight:300;}
-	#banner .banner-img {width:50%;padding-right:0;}
+	#banner .banner-img.triple, #banner .banner-img.double:last-child {width:50%;padding-right:0;}
 	#header #logo {width:60%; margin-left:0;}
 	#main-wrap #wrapper {padding:40px 5%;}
 	#wrapper .page-header {font-size:24px;}
 	#wrapper .content {line-height:23px;}
+	#banner .banner-img.single {padding-right:0;}
 	
 	/*PORTFOLIO*/
 	#portfolio #nav {width:100%; margin:195px 0 40px 0;}
